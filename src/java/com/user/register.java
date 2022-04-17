@@ -46,7 +46,7 @@ public class register extends HttpServlet {
             try{
                 Thread.sleep(1000);
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/youtubeusers","root","Krut8840");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/youtubeusers","root","yourPassword");
                 String q = "INSERT INTO user(name, password, email) values(?,?,?)";
                 PreparedStatement pstmt = con.prepareStatement(q);
                 pstmt.setString(1, name);
